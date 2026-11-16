@@ -1,0 +1,19 @@
+{
+  "name": "signup-automation",
+  "version": "1.0.0",
+  "private": true,
+  "description": "End-to-end Playwright (JavaScript) automation for the Authorized Partner signup flow",
+  "scripts": {
+    "test": "playwright test --config automation/playwright.config.js",
+    "test:headed": "playwright test --config automation/playwright.config.js --headed",
+    "test:demo": "playwright test --config automation/playwright.config.js happy-path --video=on --workers=1",
+    "test:negative": "playwright test --config automation/playwright.config.js negative-signup --workers=1",
+    "report": "playwright show-report reports/html-report",
+    "generate:manual": "node tools/generate-manual-testing.js"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.1",
+    "exceljs": "^4.4.0",
+    "pdfkit": "^0.20.2"
+  }
+}

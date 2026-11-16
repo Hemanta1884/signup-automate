@@ -1,0 +1,13 @@
+# dependencies
+node_modules/
+
+# playwright run artifacts (regenerated on every run)
+automation/test-results/
+automation/.playwright/
+playwright-report/
+
+# local environment (never commit secrets)
+.env
+
+# generated boundary test files
+automation/.tmp/
